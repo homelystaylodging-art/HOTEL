@@ -1,74 +1,119 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ShieldCheck, MapPin, Building2, Star } from 'lucide-react';
+import { ShieldCheck, MapPin, Building2, Clock, Users, Heart, Award } from 'lucide-react';
+
+const values = [
+  {
+    icon: ShieldCheck,
+    title: 'Hygiene first',
+    desc: 'We maintain the highest standards of cleanliness with regular sanitization and quality checks.'
+  },
+  {
+    icon: Building2,
+    title: 'Strategic location',
+    desc: 'Conveniently located in MIDC Waluj industrial hub for easy access to business centers.'
+  },
+  {
+    icon: Clock,
+    title: '24/7 support',
+    desc: 'Round-the-clock assistance to ensure your comfort and address any concerns.'
+  },
+  {
+    icon: Users,
+    title: 'Corporate friendly',
+    desc: 'Designed specifically for business travelers with work-friendly amenities.'
+  },
+  {
+    icon: Heart,
+    title: 'Comfort focused',
+    desc: 'Every detail is crafted to provide a home-like comfortable environment.'
+  },
+  {
+    icon: Award,
+    title: 'Quality service',
+    desc: 'Committed to delivering exceptional service and memorable experiences.'
+  }
+];
 
 export default function About() {
-  const aboutImage = PlaceHolderImages.find(img => img.id === 'about-hallway');
+  const lobbyImage = PlaceHolderImages.find(img => img.id === 'showcase-lobby');
 
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
+    <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div className="order-2 lg:order-1 relative">
-            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl z-10">
-              {aboutImage && (
+        {/* Header */}
+        <div className="text-center mb-20 space-y-4">
+          <h2 className="font-headline text-5xl font-bold text-primary">About Homely</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Your trusted partner for comfortable lodging in Chhatrapati Sambhaji Nagar
+          </p>
+        </div>
+
+        {/* Story Section */}
+        <div className="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-sm border border-border/50 mb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <h3 className="text-3xl font-bold text-primary">Our story</h3>
+              <div className="space-y-6 text-muted-foreground leading-relaxed">
+                <p>
+                  Homely was established with a clear vision: to provide corporate travelers and business professionals with a reliable, comfortable, and hygienic lodging option in the MIDC Waluj industrial area of Chhatrapati Sambhaji Nagar.
+                </p>
+                <p>
+                  We understand that when you're away from home for work, you need more than just a place to sleep. You need a space where you can rest, recharge, and prepare for the next day's challenges. That's exactly what we offer at Homely.
+                </p>
+                <p>
+                  Our facility is strategically located near major industrial units, making it convenient for business travelers while maintaining a peaceful environment. We've carefully designed our rooms and services to meet the specific needs of corporate guests who value cleanliness, comfort, and reliability.
+                </p>
+              </div>
+            </div>
+            <div className="relative aspect-square lg:aspect-auto lg:h-full min-h-[400px] rounded-[2rem] overflow-hidden shadow-xl">
+              {lobbyImage && (
                 <Image
-                  src={aboutImage.imageUrl}
-                  alt={aboutImage.description}
+                  src={lobbyImage.imageUrl}
+                  alt="Hotel Lobby"
                   fill
                   className="object-cover"
-                  data-ai-hint={aboutImage.imageHint}
+                  data-ai-hint="hotel lobby lounge"
                 />
               )}
             </div>
-            {/* Decorative floaters */}
-            <div className="absolute -bottom-6 -right-6 bg-accent p-8 rounded-3xl shadow-xl z-20 hidden sm:block">
-              <Star className="h-10 w-10 text-white fill-white" />
-              <p className="text-white font-bold mt-2">Top Rated Stays</p>
-            </div>
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-muted rounded-full -z-10 blur-2xl"></div>
           </div>
-          
-          <div className="order-1 lg:order-2 space-y-10">
-            <div className="space-y-4">
-              <h2 className="text-sm font-bold text-accent tracking-[0.2em] uppercase">About Homely Stay</h2>
-              <h3 className="font-headline text-4xl sm:text-5xl font-bold text-primary leading-tight">
-                Your Trusted Lodging Partner in Waluj Industrial Area
-              </h3>
+        </div>
+
+        {/* Values Grid */}
+        <div className="mb-32">
+          <h3 className="text-center font-headline text-3xl font-bold text-primary mb-16">Our values</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {values.map((value, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-3xl border border-border/50 shadow-sm hover:shadow-md transition-shadow group">
+                <div className="w-12 h-12 rounded-xl bg-accent/5 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
+                  <value.icon className="w-6 h-6 text-accent group-hover:text-white" />
+                </div>
+                <h4 className="text-xl font-bold text-primary mb-3">{value.title}</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">{value.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Why Choose Homely Stats */}
+        <div className="bg-white rounded-[2.5rem] p-16 shadow-sm border border-border/50 text-center max-w-6xl mx-auto">
+          <h3 className="text-3xl font-bold text-primary mb-4">Why choose Homely?</h3>
+          <p className="text-muted-foreground mb-16 max-w-2xl mx-auto">
+            We're not just a lodging facility - we're your home away from home. Our commitment to hygiene, comfort, and service excellence sets us apart.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="space-y-2">
+              <p className="text-5xl font-bold text-accent">100%</p>
+              <p className="font-bold text-primary uppercase tracking-wider text-sm">Hygiene standards</p>
             </div>
-            
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              At Homely Stay, we understand the needs of our corporate travelers and business professionals. Our lodging facility is designed to provide a comfortable, hygienic, and convenient stay in the heart of Waluj MIDC. We maintain the highest standards of cleanliness and hygiene, ensuring your safety and comfort.
-            </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div className="flex gap-5">
-                <div className="bg-muted p-4 rounded-2xl shrink-0">
-                  <ShieldCheck className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-primary text-lg">Hygiene Standards</h4>
-                  <p className="text-sm text-muted-foreground mt-1">We adhere to the highest cleanliness standards for your safety.</p>
-                </div>
-              </div>
-              <div className="flex gap-5">
-                <div className="bg-muted p-4 rounded-2xl shrink-0">
-                  <MapPin className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-primary text-lg">Strategic Location</h4>
-                  <p className="text-sm text-muted-foreground mt-1">Located in Waluj MIDC, perfect for business travelers.</p>
-                </div>
-              </div>
-              <div className="flex gap-5">
-                <div className="bg-muted p-4 rounded-2xl shrink-0">
-                  <Building2 className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-primary text-lg">Reliable Service</h4>
-                  <p className="text-sm text-muted-foreground mt-1">24/7 support and assistance to ensure a comfortable stay.</p>
-                </div>
-              </div>
+            <div className="space-y-2">
+              <p className="text-5xl font-bold text-accent">24/7</p>
+              <p className="font-bold text-primary uppercase tracking-wider text-sm">Support available</p>
+            </div>
+            <div className="space-y-2">
+              <p className="text-5xl font-bold text-accent">500+</p>
+              <p className="font-bold text-primary uppercase tracking-wider text-sm">Happy guests</p>
             </div>
           </div>
         </div>
