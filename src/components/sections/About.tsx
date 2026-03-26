@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ShieldCheck, MapPin, Building2, Clock, Users, Heart, Award } from 'lucide-react';
@@ -36,7 +37,7 @@ const values = [
 ];
 
 export default function About() {
-  const lobbyImage = PlaceHolderImages.find(img => img.id === 'showcase-lobby');
+  const hallwayImage = PlaceHolderImages.find(img => img.id === 'about-hallway');
 
   return (
     <section id="about" className="py-24 bg-background">
@@ -66,14 +67,14 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-square lg:aspect-auto lg:h-full min-h-[400px] rounded-[2rem] overflow-hidden shadow-xl">
-              {lobbyImage && (
+            <div className="relative aspect-[3/4] lg:aspect-auto lg:h-[600px] rounded-[2rem] overflow-hidden shadow-xl">
+              {hallwayImage && (
                 <Image
-                  src={lobbyImage.imageUrl}
-                  alt="Hotel Lobby"
+                  src={hallwayImage.imageUrl}
+                  alt="Interior Hallway and Seating"
                   fill
                   className="object-cover"
-                  data-ai-hint="hotel lobby lounge"
+                  data-ai-hint="hotel interior hallway"
                 />
               )}
             </div>
