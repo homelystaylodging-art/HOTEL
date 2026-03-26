@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -29,6 +30,12 @@
       "description": "Spotless modern bathroom",
       "imageUrl": "https://picsum.photos/seed/bathroom/600/600",
       "imageHint": "clean hotel bathroom"
+    },
+    {
+      "id": "showcase-lobby",
+      "description": "Comfortable Common Area",
+      "imageUrl": "https://picsum.photos/seed/lobby/800/600",
+      "imageHint": "hotel lobby lounge"
     }
   ]
 }
