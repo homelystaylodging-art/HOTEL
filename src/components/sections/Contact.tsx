@@ -1,5 +1,8 @@
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
 
 export default function Contact() {
   const address = "Near CEAT Road, Plot No 135 & 136, Ranjangaon Waluj MIDC, Chhatrapati Sambhaji Nagar.";
@@ -7,77 +10,79 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div className="space-y-8">
-            <div>
-              <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-4">Get In Touch</h2>
-              <p className="text-muted-foreground">
-                For inquiries, corporate bookings, or general assistance, reach out to our team.
-              </p>
-            </div>
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-sm font-bold text-accent tracking-[0.2em] uppercase">Contact & Location</h2>
+          <h3 className="font-headline text-4xl sm:text-5xl font-bold text-primary">Find us in the heart of Waluj MIDC</h3>
+        </div>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-background p-3 rounded-lg border">
-                  <MapPin className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-primary">Our Address</h4>
-                  <p className="text-sm text-muted-foreground">{address}</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="bg-background p-3 rounded-lg border">
-                  <Phone className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-primary">Phone</h4>
-                  <p className="text-sm text-muted-foreground">+91 1234 567 890</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="bg-background p-3 rounded-lg border">
-                  <Mail className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-primary">Email</h4>
-                  <p className="text-sm text-muted-foreground">contact@homelystay.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="bg-background p-3 rounded-lg border">
-                  <Clock className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-primary">Check-in / Check-out</h4>
-                  <p className="text-sm text-muted-foreground">Check-in: 12:00 PM | Check-out: 11:00 AM</p>
-                </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="space-y-10">
+            <div className="relative w-full h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl group border border-border/50">
+              <div className="absolute inset-0 bg-slate-200 flex flex-col items-center justify-center p-8 text-center space-y-6">
+                 <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center">
+                    <MapPin className="h-10 w-10 text-accent animate-bounce" />
+                 </div>
+                 <div className="space-y-2">
+                   <p className="font-bold text-primary text-2xl">Our Location</p>
+                   <p className="text-muted-foreground max-w-xs mx-auto">{address}</p>
+                 </div>
+                 <Button variant="default" className="bg-primary hover:bg-primary/90 rounded-full px-8" asChild>
+                   <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`} target="_blank">
+                     Open in Google Maps
+                   </a>
+                 </Button>
               </div>
             </div>
 
-            <div className="pt-8">
-              <Button size="lg" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white" asChild>
-                <a href="https://wa.me/911234567890" target="_blank">Book Now via WhatsApp</a>
-              </Button>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="p-6 rounded-3xl bg-background border flex items-center gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center shrink-0">
+                  <Phone className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Phone</p>
+                  <p className="font-bold text-primary">+91 1234 567 890</p>
+                </div>
+              </div>
+              <div className="p-6 rounded-3xl bg-background border flex items-center gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center shrink-0">
+                  <Mail className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Email</p>
+                  <p className="font-bold text-primary">contact@homelystay.com</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[450px] rounded-2xl overflow-hidden shadow-inner bg-muted group border">
-            {/* Visual placeholder for Map */}
-            <div className="absolute inset-0 bg-slate-200 flex flex-col items-center justify-center p-8 text-center space-y-4">
-               <MapPin className="h-12 w-12 text-accent/50 group-hover:scale-110 transition-transform" />
-               <p className="font-bold text-primary text-lg">Interactive Map View</p>
-               <p className="text-muted-foreground max-w-xs">{address}</p>
-               <Button variant="outline" asChild>
-                 <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`} target="_blank">
-                   Open in Google Maps
-                 </a>
-               </Button>
+          <div className="bg-background border border-border/50 rounded-[2.5rem] p-10 shadow-lg space-y-8">
+            <div className="space-y-2 text-center">
+              <h4 className="text-2xl font-bold text-primary">Quick Inquiry</h4>
+              <p className="text-muted-foreground">Send us a message and we'll get back to you shortly.</p>
             </div>
-            {/* Real Map Integration would normally go here using Vis.GL but requires API Key */}
+            
+            <form className="space-y-6">
+              <div className="space-y-2">
+                <Label htmlFor="name" className="font-bold text-primary">Name</Label>
+                <Input id="name" placeholder="Enter your full name" className="rounded-xl h-14 bg-white border-border/50" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email" className="font-bold text-primary">Email</Label>
+                <Input id="email" type="email" placeholder="you@email.com" className="rounded-xl h-14 bg-white border-border/50" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="phone" className="font-bold text-primary">Phone</Label>
+                <Input id="phone" placeholder="10-digit number" className="rounded-xl h-14 bg-white border-border/50" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="message" className="font-bold text-primary">Message</Label>
+                <Textarea id="message" placeholder="How can we help you?" className="rounded-xl min-h-[120px] bg-white border-border/50" />
+              </div>
+              <Button className="w-full bg-primary hover:bg-primary/90 text-white h-14 rounded-full font-bold text-lg shadow-xl shadow-primary/10 transition-all hover:scale-[1.02]">
+                Contact via WhatsApp
+              </Button>
+            </form>
           </div>
         </div>
       </div>
