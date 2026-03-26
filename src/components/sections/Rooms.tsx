@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -63,6 +62,7 @@ export default function Rooms() {
   const bathroomImg = PlaceHolderImages.find(img => img.id === 'bathroom-clean');
   const commonAreaImg = PlaceHolderImages.find(img => img.id === 'showcase-lobby');
   const exteriorImg = PlaceHolderImages.find(img => img.id === 'hero-exterior');
+  const whatsappNumber = "919307411979";
 
   return (
     <section id="rooms" className="py-24 bg-background">
@@ -111,7 +111,7 @@ export default function Rooms() {
                   <p className="text-3xl font-bold text-primary">₹{room.price} <span className="text-sm font-normal text-muted-foreground">per 24 hours</span></p>
                 </div>
                 <Button className="w-full bg-[#D97706] hover:bg-[#B45309] text-white font-bold h-12 rounded-xl" asChild>
-                  <a href="https://wa.me/911234567890" target="_blank">Book via WhatsApp</a>
+                  <a href={`https://wa.me/${whatsappNumber}`} target="_blank">Book via WhatsApp</a>
                 </Button>
               </div>
             </div>
@@ -202,7 +202,7 @@ export default function Rooms() {
           <h2 className="font-headline text-3xl font-bold text-primary">Ready to book?</h2>
           <p className="text-muted-foreground text-lg">Contact us via WhatsApp to check availability and make a reservation</p>
           <Button size="lg" className="bg-[#D97706] hover:bg-[#B45309] text-white px-10 h-14 text-lg font-bold rounded-xl" asChild>
-            <a href="https://wa.me/911234567890" target="_blank">Book via WhatsApp</a>
+            <a href={`https://wa.me/${whatsappNumber}`} target="_blank">Book via WhatsApp</a>
           </Button>
         </div>
       </div>

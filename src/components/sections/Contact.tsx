@@ -7,6 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export default function Contact() {
   const address = "Near CEAT Road, Plot No 135 & 136, Ranjangaon Waluj MIDC, Chhatrapati Sambhaji Nagar.";
+  const whatsappNumber = "919307411979";
 
   return (
     <section id="contact" className="py-24 bg-background">
@@ -131,7 +132,7 @@ export default function Contact() {
                   </h4>
                   <p className="text-sm text-muted-foreground mb-4">For immediate booking assistance, contact us via WhatsApp or call us directly.</p>
                   <Button variant="default" className="w-full bg-[#D97706] hover:bg-[#B45309] text-white rounded-xl h-12" asChild>
-                    <a href="https://wa.me/919307411979" target="_blank">Book via WhatsApp</a>
+                    <a href={`https://wa.me/${whatsappNumber}`} target="_blank">Book via WhatsApp</a>
                   </Button>
                 </div>
               </div>

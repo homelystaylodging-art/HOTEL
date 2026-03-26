@@ -5,6 +5,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-exterior');
+  const whatsappNumber = "919307411979";
 
   return (
     <section className="relative min-h-[700px] w-full flex items-center bg-white overflow-hidden">
@@ -26,7 +27,7 @@ export default function Hero() {
                 className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-7 rounded-full shadow-xl transition-all hover:scale-105"
                 asChild
               >
-                <a href="https://wa.me/911234567890?text=Booking Inquiry" target="_blank">
+                <a href={`https://wa.me/${whatsappNumber}?text=Booking Inquiry`} target="_blank">
                   <MessageSquare className="mr-2 h-5 w-5" />
                   Book via WhatsApp
                 </a>

@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Home } from 'lucide-react';
 
 export default function Header() {
+  const whatsappNumber = "919307411979";
+  
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,7 +32,7 @@ export default function Header() {
           
           <div className="flex items-center gap-4">
             <Button asChild variant="default" className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 shadow-md transition-all hover:shadow-lg">
-              <Link href="https://wa.me/911234567890?text=I%20would%20like%20to%20inquire%20about%20a%20booking" target="_blank">
+              <Link href={`https://wa.me/${whatsappNumber}?text=I%20would%20like%20to%20inquire%20about%20a%20booking`} target="_blank">
                 Book via WhatsApp
               </Link>
             </Button>

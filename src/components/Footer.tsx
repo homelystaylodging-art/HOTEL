@@ -3,6 +3,7 @@ import { Home, Facebook, Twitter, Instagram, MapPin, Phone, Mail } from 'lucide-
 
 export default function Footer() {
   const address = "Near CEAT Road, Plot No 135 & 136, Ranjangaon Waluj MIDC, Chhatrapati Sambhaji Nagar.";
+  const whatsappNumber = "919307411979";
 
   return (
     <footer className="bg-primary text-white pt-20 pb-10 border-t border-white/10">
@@ -68,7 +69,7 @@ export default function Footer() {
             <h4 className="font-headline font-bold text-lg tracking-wider uppercase text-white/50 text-sm">Location</h4>
             <p className="text-sm text-white/60">Located in the industrial hub of Chhatrapati Sambhaji Nagar, offering convenient access to local businesses.</p>
             <Link 
-              href="https://wa.me/919307411979" 
+              href={`https://wa.me/${whatsappNumber}`} 
               className="inline-block w-full py-4 bg-accent hover:bg-accent/90 text-white font-bold rounded-2xl text-center shadow-lg transition-transform hover:scale-105"
               target="_blank"
             >
