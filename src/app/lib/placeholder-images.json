@@ -4,37 +4,37 @@
     {
       "id": "hero-exterior",
       "description": "Main Hotel Building Exterior - High Resolution",
-      "imageUrl": "https://picsum.photos/seed/homely-ext-1/1200/800",
+      "imageUrl": "https://picsum.photos/seed/hotel-ext/1200/800",
       "imageHint": "hotel building exterior"
     },
     {
       "id": "about-hallway",
       "description": "Clean Interior Hallway with Seating Area",
-      "imageUrl": "https://picsum.photos/seed/homely-hall-1/800/1200",
+      "imageUrl": "https://picsum.photos/seed/hallway-seat/800/1000",
       "imageHint": "hotel interior hallway"
     },
     {
       "id": "room-standard",
       "description": "Standard AC Guest Room Interior",
-      "imageUrl": "https://picsum.photos/seed/homely-room-ac/800/600",
+      "imageUrl": "https://picsum.photos/seed/room-ac/800/600",
       "imageHint": "hotel guest room"
     },
     {
       "id": "room-premium",
       "description": "Non-AC Guest Room Interior",
-      "imageUrl": "https://picsum.photos/seed/homely-room-nonac/800/600",
+      "imageUrl": "https://picsum.photos/seed/room-nonac/800/600",
       "imageHint": "standard hotel room"
     },
     {
       "id": "bathroom-clean",
       "description": "Modern and Hygienic Bathroom",
-      "imageUrl": "https://picsum.photos/seed/homely-bath/600/600",
+      "imageUrl": "https://picsum.photos/seed/bath-clean/600/800",
       "imageHint": "clean hotel bathroom"
     },
     {
       "id": "showcase-lobby",
       "description": "Reception and Lobby Lounge",
-      "imageUrl": "https://picsum.photos/seed/homely-lobby/800/600",
+      "imageUrl": "https://picsum.photos/seed/lobby-show/800/600",
       "imageHint": "hotel lobby lounge"
     }
   ]
