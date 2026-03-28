@@ -3,38 +3,38 @@
   "placeholderImages": [
     {
       "id": "hero-exterior",
-      "description": "Hotel building exterior",
-      "imageUrl": "https://picsum.photos/seed/hotel-exterior/1200/800",
+      "description": "Main Hotel Building Exterior - High Resolution",
+      "imageUrl": "https://picsum.photos/seed/homely-ext-1/1200/800",
       "imageHint": "hotel building exterior"
     },
     {
       "id": "about-hallway",
-      "description": "Clean interior lobby and hallway",
-      "imageUrl": "https://picsum.photos/seed/hotel-hallway/800/1200",
+      "description": "Clean Interior Hallway with Seating Area",
+      "imageUrl": "https://picsum.photos/seed/homely-hall-1/800/1200",
       "imageHint": "hotel interior hallway"
     },
     {
       "id": "room-standard",
-      "description": "Standard AC/Non-AC guest room",
-      "imageUrl": "https://picsum.photos/seed/room-std/800/600",
+      "description": "Standard AC Guest Room Interior",
+      "imageUrl": "https://picsum.photos/seed/homely-room-ac/800/600",
       "imageHint": "hotel guest room"
     },
     {
       "id": "room-premium",
-      "description": "Premium guest room option",
-      "imageUrl": "https://picsum.photos/seed/room-prem/800/600",
-      "imageHint": "luxury hotel room"
+      "description": "Non-AC Guest Room Interior",
+      "imageUrl": "https://picsum.photos/seed/homely-room-nonac/800/600",
+      "imageHint": "standard hotel room"
     },
     {
       "id": "bathroom-clean",
-      "description": "Spotless modern bathroom",
-      "imageUrl": "https://picsum.photos/seed/bathroom/600/600",
+      "description": "Modern and Hygienic Bathroom",
+      "imageUrl": "https://picsum.photos/seed/homely-bath/600/600",
       "imageHint": "clean hotel bathroom"
     },
     {
       "id": "showcase-lobby",
-      "description": "Comfortable Common Area",
-      "imageUrl": "https://picsum.photos/seed/lobby/800/600",
+      "description": "Reception and Lobby Lounge",
+      "imageUrl": "https://picsum.photos/seed/homely-lobby/800/600",
       "imageHint": "hotel lobby lounge"
     }
   ]
