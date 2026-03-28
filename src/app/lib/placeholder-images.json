@@ -1,29 +1,28 @@
-
 {
   "placeholderImages": [
     {
       "id": "hero-exterior",
-      "description": "Main Hotel Building Exterior - High Resolution",
-      "imageUrl": "https://drive.google.com/file/d/1-U1xYSaSGxTMwbo3-9AvfoNUXjiJFrAb/view?usp=drivesdk",
+      "description": "Main Hotel Building Exterior",
+      "imageUrl": "https://picsum.photos/seed/hotel-ext/1200/800",
       "imageHint": "hotel building exterior"
     },
     {
       "id": "about-hallway",
-      "description": "Clean Interior Hallway with Seating Area",
+      "description": "Clean Interior Hallway and Seating Area",
       "imageUrl": "https://picsum.photos/seed/hallway-seat/800/1000",
       "imageHint": "hotel interior hallway"
     },
     {
       "id": "room-standard",
-      "description": "Standard AC Guest Room Interior",
-      "imageUrl": "https://picsum.photos/seed/room-ac/800/600",
+      "description": "Standard Guest Room",
+      "imageUrl": "https://picsum.photos/seed/room-std/800/600",
       "imageHint": "hotel guest room"
     },
     {
       "id": "room-premium",
-      "description": "Non-AC Guest Room Interior",
-      "imageUrl": "https://picsum.photos/seed/room-nonac/800/600",
-      "imageHint": "standard hotel room"
+      "description": "Premium Guest Room",
+      "imageUrl": "https://picsum.photos/seed/room-prem/800/600",
+      "imageHint": "luxury hotel room"
     },
     {
       "id": "bathroom-clean",
@@ -33,9 +32,9 @@
     },
     {
       "id": "showcase-lobby",
-      "description": "Reception and Lobby Lounge",
+      "description": "Reception and Lobby area",
       "imageUrl": "https://picsum.photos/seed/lobby-show/800/600",
-      "imageHint": "hotel lobby lounge"
+      "imageHint": "hotel lobby"
     }
   ]
 }
