@@ -3,37 +3,37 @@
     {
       "id": "hero-exterior",
       "description": "Hotel building exterior",
-      "imageUrl": "https://docs.google.com/uc?export=download&id=1-U1xYSaSGxTMwbo3-9AvfoNUXjiJFrAb",
+      "imageUrl": "https://docs.google.com/uc?export=download&id=1gnSebxAeMmdrlvIF3du96QhgJoCZRVz1",
       "imageHint": "hotel building exterior"
     },
     {
       "id": "about-hallway",
       "description": "Clean interior lobby and hallway",
-      "imageUrl": "https://drive.google.com/file/d/1-U1xYSaSGxTMwbo3-9AvfoNUXjiJFrAb/view?usp=drivesdk/800/1000",
+      "imageUrl": "https://docs.google.com/uc?export=download&id=1kZOoTnjVml4CnsK-39eZEIoSU4-OP691",
       "imageHint": "hotel interior hallway"
     },
     {
       "id": "room-standard",
-      "description": "Standard AC/Non-AC guest room",
-      "imageUrl": "https://picsum.photos/seed/room-std/800/600",
+      "description": "",
+      "imageUrl": "https://docs.google.com/uc?export=download&id=1-U1xYSaSGxTMwbo3-9AvfoNUXjiJFrAb",
       "imageHint": "hotel guest room"
     },
     {
       "id": "room-premium",
       "description": "Premium guest room option",
-      "imageUrl": "https://picsum.photos/seed/room-prem/800/600",
+      "imageUrl": "https://docs.google.com/uc?export=download&id=1TzxJpZSoPvYEsVuWKelJMEylU1lL32hv",
       "imageHint": "luxury hotel room"
     },
     {
       "id": "bathroom-clean",
-      "description": "Spotless modern bathroom",
-      "imageUrl": "https://picsum.photos/seed/bathroom/600/600",
+      "description": "",
+      "imageUrl": "https://docs.google.com/uc?export=download&id=1KMwO1B6gZXVqDUDuZIRzaiSkn0XC0Q7s",
       "imageHint": "clean hotel bathroom"
     },
     {
       "id": "showcase-lobby",
-      "description": "Reception and Lobby",
-      "imageUrl": "https://picsum.photos/seed/lobby/800/600",
+      "description": "",
+      "imageUrl": "https://docs.google.com/uc?export=download&id=1kZOoTnjVml4CnsK-39eZEIoSU4-OP691",
       "imageHint": "hotel lobby"
     }
   ]
