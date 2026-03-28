@@ -11,8 +11,6 @@ import {
   Tv, 
   ShieldCheck, 
   Wind, 
-  Lock,
-  ArrowRight
 } from 'lucide-react';
 import {
   Table,
@@ -60,13 +58,11 @@ const pricingData = [
 
 export default function Rooms() {
   const bathroomImg = PlaceHolderImages.find(img => img.id === 'bathroom-clean');
-  const commonAreaImg = PlaceHolderImages.find(img => img.id === 'showcase-lobby');
   const exteriorImg = PlaceHolderImages.find(img => img.id === 'hero-exterior');
   const whatsappNumber = "919307411979";
 
   return (
     <section id="rooms" className="py-24 bg-background">
-      {/* Header */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
         <h2 className="font-headline text-5xl font-bold text-primary mb-4">Our rooms</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -74,7 +70,6 @@ export default function Rooms() {
         </p>
       </div>
 
-      {/* Room Cards Grid */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mb-32">
         {roomTypes.map((room) => {
           const roomImg = PlaceHolderImages.find(img => img.id === room.imageId);
@@ -83,8 +78,8 @@ export default function Rooms() {
               key={room.id} 
               className={`bg-white rounded-3xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl border-2 ${room.isPremium ? 'border-primary' : 'border-transparent'}`}
             >
-              <div className="relative aspect-video">
-                {roomImg && (
+              <div className="relative aspect-video bg-muted">
+                {roomImg ? (
                   <Image
                     src={roomImg.imageUrl}
                     alt={roomImg.description}
@@ -92,6 +87,10 @@ export default function Rooms() {
                     className="object-cover"
                     data-ai-hint={roomImg.imageHint}
                   />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-muted-foreground italic bg-muted">
+                    Room Photo
+                  </div>
                 )}
               </div>
               <div className="p-8 space-y-6">
@@ -119,15 +118,16 @@ export default function Rooms() {
         })}
       </div>
 
-      {/* Property Showcase */}
       <div className="bg-muted/30 py-24 mb-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-center font-headline text-3xl font-bold text-primary mb-16">Property showcase</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
             <div className="bg-white rounded-3xl overflow-hidden shadow-sm">
-              <div className="relative aspect-[4/3]">
-                {bathroomImg && (
+              <div className="relative aspect-[4/3] bg-muted">
+                {bathroomImg ? (
                   <Image src={bathroomImg.imageUrl} alt="Modern Bathroom" fill className="object-cover" data-ai-hint="modern hotel bathroom" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-muted-foreground italic bg-muted">Bathroom</div>
                 )}
               </div>
               <div className="p-8">
@@ -136,9 +136,11 @@ export default function Rooms() {
               </div>
             </div>
             <div className="bg-white rounded-3xl overflow-hidden shadow-sm">
-              <div className="relative aspect-[4/3]">
-                {exteriorImg && (
-                  <Image src={exteriorImg.imageUrl} alt="Common Area" fill className="object-cover" data-ai-hint="hotel front exterior" />
+              <div className="relative aspect-[4/3] bg-muted">
+                {exteriorImg ? (
+                  <Image src={exteriorImg.imageUrl} alt="Exterior View" fill className="object-cover" data-ai-hint="hotel front exterior" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-muted-foreground italic bg-muted">Exterior</div>
                 )}
               </div>
               <div className="p-8">
@@ -150,7 +152,6 @@ export default function Rooms() {
         </div>
       </div>
 
-      {/* Amenities Breakdown */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-32">
         <h2 className="text-center font-headline text-3xl font-bold text-primary mb-16">Amenities breakdown</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -168,7 +169,6 @@ export default function Rooms() {
         </div>
       </div>
 
-      {/* Pricing Table */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-32">
         <div className="max-w-4xl mx-auto bg-white rounded-3xl border shadow-sm p-10">
           <h2 className="text-center font-headline text-2xl font-bold text-primary mb-10">Pricing table</h2>
@@ -196,7 +196,6 @@ export default function Rooms() {
         </div>
       </div>
 
-      {/* Final CTA */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto bg-muted/50 rounded-3xl p-16 text-center space-y-8">
           <h2 className="font-headline text-3xl font-bold text-primary">Ready to book?</h2>

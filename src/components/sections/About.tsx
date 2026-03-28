@@ -1,7 +1,6 @@
-
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ShieldCheck, MapPin, Building2, Clock, Users, Heart, Award } from 'lucide-react';
+import { ShieldCheck, Building2, Clock, Users, Heart, Award } from 'lucide-react';
 
 const values = [
   {
@@ -42,7 +41,6 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-20 space-y-4">
           <h2 className="font-headline text-5xl font-bold text-primary">About Homely</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -50,7 +48,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Story Section */}
         <div className="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-sm border border-border/50 mb-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -67,8 +64,8 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[3/4] lg:aspect-auto lg:h-[600px] rounded-[2rem] overflow-hidden shadow-xl">
-              {hallwayImage && (
+            <div className="relative aspect-[3/4] lg:aspect-auto lg:h-[600px] rounded-[2rem] overflow-hidden shadow-xl bg-muted">
+              {hallwayImage ? (
                 <Image
                   src={hallwayImage.imageUrl}
                   alt="Interior Hallway and Seating"
@@ -76,12 +73,15 @@ export default function About() {
                   className="object-cover"
                   data-ai-hint="hotel interior hallway"
                 />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-muted-foreground italic bg-muted">
+                  Interior Hallway Photo
+                </div>
               )}
             </div>
           </div>
         </div>
 
-        {/* Values Grid */}
         <div className="mb-32">
           <h3 className="text-center font-headline text-3xl font-bold text-primary mb-16">Our values</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -97,7 +97,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Why Choose Homely Stats */}
         <div className="bg-white rounded-[2.5rem] p-16 shadow-sm border border-border/50 text-center max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold text-primary mb-4">Why choose Homely?</h3>
           <p className="text-muted-foreground mb-16 max-w-2xl mx-auto">

@@ -46,8 +46,8 @@ export default function Hero() {
             </div>
           </div>
           
-          <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden shadow-2xl animate-in fade-in slide-in-from-right duration-1000">
-            {heroImage && (
+          <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden shadow-2xl animate-in fade-in slide-in-from-right duration-1000 bg-muted">
+            {heroImage ? (
               <Image
                 src={heroImage.imageUrl}
                 alt={heroImage.description}
@@ -56,13 +56,16 @@ export default function Hero() {
                 priority
                 data-ai-hint={heroImage.imageHint}
               />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center text-muted-foreground italic bg-muted">
+                Hotel Exterior Photo
+              </div>
             )}
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
           </div>
         </div>
       </div>
       
-      {/* Decorative background element */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-accent/5 rounded-full blur-3xl -z-10"></div>
     </section>
   );

@@ -3,13 +3,13 @@
     {
       "id": "hero-exterior",
       "description": "Hotel building exterior",
-      "imageUrl": "https://picsum.photos/seed/hotel-exterior/1200/800",
+      "imageUrl": "https://picsum.photos/seed/hotel-ext/1200/800",
       "imageHint": "hotel building exterior"
     },
     {
       "id": "about-hallway",
       "description": "Clean interior lobby and hallway",
-      "imageUrl": "https://picsum.photos/seed/hotel-hallway/800/600",
+      "imageUrl": "https://picsum.photos/seed/hallway/800/1000",
       "imageHint": "hotel interior hallway"
     },
     {
@@ -29,6 +29,12 @@
       "description": "Spotless modern bathroom",
       "imageUrl": "https://picsum.photos/seed/bathroom/600/600",
       "imageHint": "clean hotel bathroom"
+    },
+    {
+      "id": "showcase-lobby",
+      "description": "Reception and Lobby",
+      "imageUrl": "https://picsum.photos/seed/lobby/800/600",
+      "imageHint": "hotel lobby"
     }
   ]
 }
